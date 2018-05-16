@@ -1,0 +1,52 @@
+def travel(userChoice)
+    maxDist = 1000
+    distPerHour = []
+    distance = 0
+    time = 0
+
+
+    if userChoice == 1
+
+       while(distance<=1000) do
+                speed = (rand*30 + 10).to_i
+                distance = distance + speed
+
+                time = time + 1
+                distPerHour.push(speed)
+                end
+    elsif userChoice == 2
+
+        while(distance<=1000) do
+                speed = (rand*70 + 20).to_i
+                distance = distance + speed
+                time = time + 1
+
+                distPerHour.push(speed)
+                end
+    elsif userChoice == 3
+
+        while(distance<=1000) do
+                speed = (rand*600 + 400).to_i
+                distance = distance + speed
+                time = time + 1
+
+                distPerHour.push(speed)
+                end
+
+        end
+
+        puts "The number of hours it took to travel 1000 miles was #{time} hours"
+        puts "The maximum speed was #{distPerHour.max} mph"
+
+end
+
+puts "Pick a vehicle"
+puts "1. Bicycle"
+puts "2. Car"
+puts "3. Jet Plane"
+puts "Choose 1-3: "
+a = gets.to_i
+
+travel(a)
+
+puts "=============="
