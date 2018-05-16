@@ -1,0 +1,16 @@
+def golomb(n)
+
+    return n if n <= 1
+    (1 + golomb(n-golomb(golomb(n-1))) )
+
+end
+def print(n)
+    i = 1
+    while (i <= n)
+          puts golomb(i)
+          i= i+1
+          end
+end
+
+
+puts print(9)
