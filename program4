@@ -1,0 +1,27 @@
+def randomNum()
+
+rands = []
+count = 0
+
+loop do
+
+      puts (rand(1)+0)
+      count = count + 1
+
+      system("stty raw -echo")
+      char = STDIN.read_nonblock(1)
+      rescue nil
+      system("stty -raw echo")
+      break if /./=~char
+
+      sleep 1
+      end
+
+
+puts rands
+puts "Total number of random numbers generated: #{count}"
+
+end
+
+
+randomNum()
