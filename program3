@@ -1,0 +1,23 @@
+def sorted(arr)
+    newArr = []
+    finalArr = []
+    i = 0
+    while i<arr.size do
+          newArr.push(arr[i].ord)
+          i= i+1
+          end
+    copy = newArr.sort
+
+
+    count = 0
+    while count < copy.size do
+          finalArr.push(copy[count].chr)
+          count = count + 1
+          end
+
+    puts finalArr
+
+end
+
+array = ["a", "B", "A"]
+sorted(array)
