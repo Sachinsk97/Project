@@ -1,0 +1,27 @@
+def unique(file, n)
+    a = n.to_i
+
+    File.open(file, "r")
+    arr = IO.readlines(file)
+
+    arr.uniq!
+
+    x = 0
+    while x < a
+          puts arr[x]
+          x = x + 1
+          end
+
+end
+
+puts "Enter a value: "
+a = gets
+puts "=============="
+
+puts "What is the file name: "
+b = gets.chomp
+s = File.new(b, "r")
+
+puts "=============="
+
+unique(b,a)
